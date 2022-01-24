@@ -72,13 +72,13 @@ function Add({ handelAdd }) {
                 variant="filled"
                 onChange={handelvalue}
                 //InputProps={{ inputProps: { min: 0, max: 5 } }}
-                inputProps={{ min: 0, max: 5, width: "100%" }}
+                inputProps={{ min: 0, max: 5 }}
                 InputLabelProps={{
                   shrink: true,
                 }}
               />{" "}
             </Box>
-            <br />
+
             <input
               type="date"
               placeholder="Movie Date "
@@ -115,6 +115,7 @@ function Add({ handelAdd }) {
                 e.preventDefault();
                 handleClose();
                 setGetAdd({
+                  id: Math.random(),
                   image: "",
                   rating: "",
                   name: "",

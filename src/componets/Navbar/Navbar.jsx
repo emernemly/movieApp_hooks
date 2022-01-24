@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import MenuIcon from "@mui/icons-material/Menu";
 import FilterTitel from "./FilterTitel";
 import FIlterRate from "./FIlterRate";
+import { Link } from "react-router-dom";
 
 function Navbar({ setText, setgetRate, text }) {
   return (
@@ -28,7 +29,9 @@ function Navbar({ setText, setgetRate, text }) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            MUI
+            <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+              Home
+            </Link>
           </Typography>
           <FilterTitel setText={setText} text={text} />
           <FIlterRate setgetRate={setgetRate} />
